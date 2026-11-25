@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7eef0">
+    <meta name="description" content="A little love letter, made just for you.">
+    <title>A little love letter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="scene">
+        <div class="ambient ambient-one" aria-hidden="true"></div>
+        <div class="ambient ambient-two" aria-hidden="true"></div>
 
+        <header class="topbar">
+            <a class="wordmark" href="#" aria-label="A little love letter home">
+                <span class="wordmark-heart" aria-hidden="true">♥</span>
+                <span>a little love letter</span>
+            </a>
+            <button class="settings-trigger" id="settings-trigger" type="button" aria-label="Open letter settings" aria-controls="settings-panel" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/><path d="m19.4 15 .05.05a1.8 1.8 0 1 1-2.55 2.55l-.05-.05a1.8 1.8 0 0 0-3.06 1.27v.15a1.8 1.8 0 1 1-3.6 0v-.08a1.8 1.8 0 0 0-3.07-1.27l-.05.05a1.8 1.8 0 1 1-2.55-2.55l.05-.05a1.8 1.8 0 0 0-1.27-3.06h-.15a1.8 1.8 0 1 1 0-3.6h.08a1.8 1.8 0 0 0 1.27-3.07l-.05-.05A1.8 1.8 0 1 1 7 2.67l.05.05a1.8 1.8 0 0 0 3.06-1.27V1.3a1.8 1.8 0 1 1 3.6 0v.08a1.8 1.8 0 0 0 3.07 1.27l.05-.05a1.8 1.8 0 1 1 2.55 2.55l-.05.05a1.8 1.8 0 0 0 1.27 3.06h.15a1.8 1.8 0 1 1 0 3.6h-.08A1.8 1.8 0 0 0 19.4 15Z"/></svg>
+                <span>Personalize</span>
+            </button>
+        </header>
+
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow"><span aria-hidden="true">✳</span> A small thing, from the heart</p>
+            <h1 id="page-title">For someone <em>special.</em></h1>
+            <p class="intro-copy">A little note, wrapped up with love.<br>Take a moment and open it.</p>
+        </section>
+
+        <section class="letter-scene" aria-label="Your love letter">
+            <div class="flower" aria-hidden="true">
+                <svg class="flower-art" viewBox="0 0 240 260" role="presentation">
+                    <path class="stem" d="M120 133c0 34 3 61-1 105"/>
+                    <path class="leaf leaf-left" d="M119 193c-23-23-47-17-48-15 2 23 25 36 48 20"/>
+                    <path class="leaf leaf-right" d="M120 215c18-22 39-21 45-18-3 21-22 35-45 24"/>
+                    <g class="petals">
+                        <ellipse class="petal petal-1" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-2" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-3" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-4" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-5" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-6" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-7" cx="120" cy="35" rx="19" ry="35"/>
+                        <ellipse class="petal petal-8" cx="120" cy="35" rx="19" ry="35"/>
+                    </g>
+                    <circle class="flower-center" cx="120" cy="65" r="20"/>
+                    <circle class="flower-center-dot" cx="113" cy="60" r="2"/>
+                    <circle class="flower-center-dot" cx="126" cy="69" r="2"/>
+                    <circle class="flower-center-dot" cx="121" cy="56" r="1.7"/>
+                </svg>
+                <span class="sparkle sparkle-one">✦</span>
+                <span class="sparkle sparkle-two">✧</span>
+                <span class="sparkle sparkle-three">✧</span>
+            </div>
+
+            <button class="envelope" id="open-letter" type="button" aria-label="Open your love letter">
+                <span class="envelope-shadow" aria-hidden="true"></span>
+                <span class="envelope-back" aria-hidden="true"></span>
+                <span class="envelope-letter-preview" aria-hidden="true"><span>with love,</span><i>♥</i></span>
+                <span class="envelope-front" aria-hidden="true"></span>
+                <span class="envelope-flap" aria-hidden="true"></span>
+                <span class="envelope-seal" aria-hidden="true">♥</span>
+            </button>
+            <p class="envelope-hint" id="envelope-hint">tap the envelope to open</p>
+        </section>
+
+        <footer class="footer-note"><span aria-hidden="true">♡</span> Made with a little extra love</footer>
+
+        <section class="letter-overlay" id="letter-overlay" aria-label="Opened love letter" aria-hidden="true" inert>
+            <button class="close-letter" id="close-letter" type="button" aria-label="Close letter">×</button>
+            <article class="letter-paper" id="letter-paper" tabindex="0" aria-label="Your letter. Scroll to read.">
+                <div class="letter-content" id="letter-content"></div>
+                <span class="letter-end-heart" aria-hidden="true">♥</span>
+            </article>
+            <p class="scroll-hint" id="scroll-hint"><span aria-hidden="true">↓</span> your letter is unfolding</p>
+        </section>
+    </main>
+
+    <div class="settings-backdrop" id="settings-backdrop" hidden></div>
+    <aside class="settings-panel" id="settings-panel" aria-labelledby="settings-title" aria-hidden="true" inert>
+        <div class="settings-heading">
+            <div>
+                <p class="eyebrow">Make it yours</p>
+                <h2 id="settings-title">Letter settings</h2>
+            </div>
+            <button class="close-settings" id="close-settings" type="button" aria-label="Close settings">×</button>
+        </div>
+        <label class="field-label" for="message-input">Your message</label>
+        <textarea id="message-input" rows="9" maxlength="4000" spellcheck="true"></textarea>
+        <p class="field-help">Your changes are saved in this browser.</p>
+
+        <label class="field-label" for="font-select">Letter style</label>
+        <select id="font-select">
+            <option value="playfair">Soft &amp; romantic</option>
+            <option value="dancing">Handwritten</option>
+            <option value="baskerville">Classic</option>
+        </select>
+
+        <label class="field-label" for="music-input">A song to play</label>
+        <label class="upload-control" for="music-input">
+            <span class="upload-icon" aria-hidden="true">♫</span>
+            <span id="music-label">Choose an audio file</span>
+            <span class="upload-arrow" aria-hidden="true">＋</span>
+        </label>
+        <input id="music-input" type="file" accept="audio/*" hidden>
+        <label class="field-label song-url-label" for="music-url-input">Or add a hosted song link</label>
+        <input class="song-url-input" id="music-url-input" type="url" inputmode="url" placeholder="https://example.com/song.mp3" autocomplete="url">
+        <button class="remove-music" id="remove-music" type="button" hidden>Remove song</button>
+        <p class="field-help">Music starts when the envelope opens. Use a hosted link to include music in a share link; uploaded files stay on this device.</p>
+        <p class="music-status" id="music-status" role="status" aria-live="polite"></p>
+        <button class="share-button" id="share-letter" type="button">Copy share link <span aria-hidden="true">↗</span></button>
+        <input class="share-link-output" id="share-link-output" type="text" readonly aria-label="Your share link" hidden>
+        <button class="done-button" id="done-settings" type="button">Done <span aria-hidden="true">♥</span></button>
+    </aside>
+    <audio id="letter-music" loop preload="none"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
